@@ -1,0 +1,51 @@
+{
+  "name": "pelican",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "test": "yarn test:unit && yarn test:e2e",
+    "test:unit": "cross-env TEST=unit ava ./test/specs/**/*",
+    "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*",
+    "p2p": "peerjs --port 4000 --key peerjs --path /p2p"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^4.7.0",
+    "@mapbox/mapbox-sdk": "^0.12.1",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@turf/turf": "^6.3.0",
+    "core-js": "^3.9.1",
+    "mapbox-gl": "^2.2.0",
+    "nuxt": "^2.15.3",
+    "peerjs": "^1.3.2"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^4.0.1",
+    "@vue/test-utils": "^1.1.3",
+    "ava": "^3.15.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.9.0",
+    "jsdom": "^16.5.1",
+    "jsdom-global": "^3.0.2",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.8",
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^1.0.0",
+    "require-extension-hooks-vue": "^3.0.0",
+    "sass-loader": "^10.1.1"
+  }
+}
